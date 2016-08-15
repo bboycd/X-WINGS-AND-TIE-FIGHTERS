@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">X-WINGS &amp; TIE FIGHTERS</string>
+    <string name="rebelwin">Rebels Win!</string>
+    <string name="empirewin">Empire Wins!</string>
+    <string name="planets1">Coruscant</string>
+    <string name="planets2">Tatooine</string>
+    <string name="planets3">Felucia</string>
+    <string name="planets4">Hoth</string>
+    <string name="planets5">Naboo</string>
+    <string name="planets6">Serenno</string>
+    <string name="planets7">Bespin</string>
+    <string name="planets8">Kamino</string>
+    <string name="planets9">Kashyyyk</string>
+    <string name="force">May The Force Be With You....</string>
+</resources>
