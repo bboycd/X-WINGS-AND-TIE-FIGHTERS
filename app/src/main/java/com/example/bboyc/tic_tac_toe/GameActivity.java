@@ -1,6 +1,4 @@
 package com.example.bboyc.tic_tac_toe;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,7 +19,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     Button[] bArray;
 
+
+
      public boolean playerTurn = true;
+    int turn_count = 0;
 
 
     @Override
@@ -68,10 +69,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         if (playerTurn) {
             turn.setText("O");
+            toast("Rebels Turn...");
         } else {
             turn.setText("X");
+            toast("Empire's Turn...");
         }
-        turn.setClickable(false);
+        turn_count++;
 
         playerTurn = !playerTurn;
 
@@ -107,6 +110,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             choice = true;
 
 
+
         if (choice) {
             if (playerTurn) {
 
@@ -115,8 +119,22 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 toast("Empire Wins!");
             }
+            enabledisableAllButtons(false);
+        }else if (turn_count == 9){
+                toast("DRAW");
+
+            }
+
+
+
         }
-    }
+    public void enabledisableAllButtons(boolean enable) {
+        for (Button turn : bArray) {
+            turn.setClickable(enable);
+        }
+
+}
+
 
     public void toast(String message) {
         Toast.makeText(GameActivity.this, message, Toast.LENGTH_SHORT).show();

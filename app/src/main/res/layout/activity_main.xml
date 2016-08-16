@@ -30,6 +30,6 @@
         android:layout_centerHorizontal="true"
         android:clickable="false"
         android:backgroundTint="#090909"
-        android:onClick="message"/>
+        android:onClick="playMusic"/>
 
 </RelativeLayout>
