@@ -1,4 +1,5 @@
 package com.example.bboyc.tic_tac_toe;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -68,11 +69,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void buttonClicked(Button turn) {
 
         if (playerTurn) {
-            turn.setText("O");
-            toast("Rebels Turn...");
+            turn.setText("X-WING");
+            turn.setTextSize(23);
+            turn.setTextColor(Color.BLUE);
+            toast("Rebels have occupied this planet!");
         } else {
-            turn.setText("X");
-            toast("Empire's Turn...");
+            turn.setText("TIE-FIGHTER");
+            turn.setTextSize(20);
+            turn.setTextColor(Color.RED);
+            toast("The Empire has invaded this planet!");
         }
         turn_count++;
 
@@ -114,10 +119,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         if (choice) {
             if (playerTurn) {
 
-                toast("Rebels Win!");
+                toast("Empire Wins!");
 
             } else {
-                toast("Empire Wins!");
+                toast("Rebels Win!");
             }
             enabledisableAllButtons(false);
         }else if (turn_count == 9){
